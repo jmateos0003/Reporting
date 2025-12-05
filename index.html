@@ -735,41 +735,53 @@
 </div>
 
 
-            <!-- GOOGLE ADS -->
-            <div class="card" style="box-shadow:none;border-radius:20px;padding:16px;background:#f4f5fb;">
-              <div class="card-header" style="margin-bottom:8px;">
-                <div>
-                  <div class="card-title" style="font-size:0.95rem;">Google Ads</div>
-                  <div class="card-subtitle">Arranque de campaña de búsqueda</div>
-                </div>
-                <span class="pill-tag"><span></span> Búsqueda de pago</span>
-              </div>
+           <!-- GOOGLE ADS -->
+<div class="card" style="box-shadow:none;border-radius:20px;padding:16px;background:#f4f5fb;">
+  <div class="card-header" style="margin-bottom:8px;">
+    <div>
+      <div class="card-title" style="font-size:0.95rem;">Google Ads</div>
+      <div class="card-subtitle">Arranque de campaña de búsqueda</div>
+    </div>
+    <span class="pill-tag"><span></span> Búsqueda de pago</span>
+  </div>
 
-              <div class="grid grid-2">
-                <div class="kpi">
-                  <div class="kpi-label">Clics</div>
-                  <div class="kpi-value">1.510</div>
-                  <div class="kpi-sub">Impresiones: 82.700</div>
-                  <div class="kpi-delta positive">
-                    CTR estimado ~1,8&nbsp;%
-                  </div>
-                </div>
-                <div class="kpi">
-                  <div class="kpi-label">Coste &amp; CPC medio</div>
-                  <div class="kpi-value">61,08&nbsp;€</div>
-                  <div class="kpi-sub">CPC medio: 0,04&nbsp;€/clic</div>
-                  <div class="kpi-delta positive">
-                    Tráfico muy barato para un arranque
-                  </div>
-                </div>
-              </div>
+  <div class="grid grid-2">
+    <div class="kpi">
+      <div class="kpi-label">Clics (plataforma)</div>
+      <div class="kpi-value">1.510</div>
+      <div class="kpi-sub">Impresiones: 82.700</div>
+      <div class="kpi-delta positive">
+        CTR estimado ~1,8&nbsp;%
+      </div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Coste &amp; CPC medio</div>
+      <div class="kpi-value">61,08&nbsp;€</div>
+      <div class="kpi-sub">CPC medio: 0,04&nbsp;€/clic</div>
+      <div class="kpi-delta positive">
+        Tráfico muy barato para un arranque
+      </div>
+    </div>
+  </div>
 
-              <p class="small" style="margin-top:8px;">
-                Todavía no hay semana anterior de referencia (la campaña arranca el 27/11), pero los primeros datos
-                son buenos: <strong>muchos clics a bajo coste</strong>. Falta conectar estos clics con inscripciones
-                en GA4 para saber qué palabras clave están trayendo realmente negocio y cuáles conviene pausar.
-              </p>
-            </div>
+  <!-- Nota de discrepancia con GA4 -->
+  <p class="small" style="margin-top:8px;margin-bottom:8px;">
+    <strong>Qué ve GA4:</strong> en Analytics aparecen unos <strong>526 usuarios etiquetados como
+    google / cpc</strong>. Ese número es más alto que los clics reales de la campaña porque GA4
+    agrupa bajo esa etiqueta también otras visitas (por ejemplo tráfico antiguo o mal etiquetado).
+    Por eso, igual que en Meta, usamos los datos de <strong>Google Ads como fuente oficial de clics
+    y coste</strong>.
+  </p>
+
+  <p class="small">
+    <strong>Lectura:</strong> es una campaña muy nueva (arranca el <strong>27/11</strong>), pero los
+    primeros datos son buenos: <strong>muchos clics a bajo coste</strong>. El siguiente paso es
+    conectar estos clics con las inscripciones (cuando GA4 mida bien las conversiones) para saber
+    qué <strong>palabras clave traen negocio de verdad</strong> y cuáles conviene pausar o
+    reajustar.
+  </p>
+</div>
+
           </div>
         </div>
 
@@ -779,7 +791,7 @@
             <div>
               <h2 class="card-title">Tráfico orgánico y marca</h2>
               <div class="card-subtitle">
-                Lo que nos cuentan Search Console y el tráfico directo sobre la marca Football&Fun.
+                Search Console y el tráfico directo sobre la marca Football&Fun.
               </div>
             </div>
             <span class="chip">SEO · Search Console</span>
@@ -791,7 +803,7 @@
               <div class="kpi-value">31</div>
               <div class="kpi-sub">Semana anterior: 0</div>
               <div class="kpi-delta positive">
-                ▲ SEO empieza a despegar
+                ▲ Empezamos a recibir datos 
               </div>
             </div>
             <div class="kpi">
@@ -962,6 +974,7 @@
   </script>
 </body>
 </html>
+
 
 
 
