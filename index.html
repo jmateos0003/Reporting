@@ -788,6 +788,41 @@
 
           </div>
         </div>
+<!-- ACLARACIÓN CPC REAL SEGÚN GA4 -->
+<div class="card" style="box-shadow:none;border-radius:20px;padding:16px;background:#fff7e6;">
+  <div class="card-header" style="margin-bottom:8px;">
+    <div>
+      <div class="card-title" style="font-size:0.95rem;">Cómo interpretar el coste por clic (CPC)</div>
+      <div class="card-subtitle">Diferencia entre datos de plataformas y datos reales en GA4</div>
+    </div>
+  </div>
+
+  <p class="small" style="margin-bottom:6px;">
+    Meta y Google Ads reportan su propio CPC en función de los clics que detectan dentro de sus sistemas.
+    Sin embargo, <strong>no todos esos clics llegan realmente a cargar la web</strong>, especialmente en Meta,
+    donde muchos usuarios abren enlaces dentro del navegador interno de la app.
+  </p>
+
+  <ul class="list-tight">
+    <li>
+      <strong>Meta Ads:</strong> aunque la plataforma reporta un CPC muy bajo (~0,09 €),
+      si usamos los usuarios reales que llegan desde GA4 (≈629), el coste por usuario real es
+      de <strong>≈ 0,47 €/usuario</strong>. Esta cifra representa mejor el coste real de visita.
+    </li>
+    <li>
+      <strong>Google Ads:</strong> GA4 todavía no distingue correctamente el tráfico
+      porque mezcla (google / cpc) con tráfico orgánico y de marca.
+      Hasta que el etiquetado UTM esté limpio, el valor válido es el CPC reportado por Ads
+      (<strong>≈1,97 €</strong>).
+    </li>
+  </ul>
+
+  <p class="small" style="margin-top:6px;">
+    <strong>Conclusión:</strong> Meta genera mucho volumen pero no todos los clics llegan a la web,
+    por lo que su CPC real es más alto que el oficial.
+    En Google Ads, necesitaremos unos días más para medir correctamente el impacto por palabra clave.
+  </p>
+</div>
 
         <!-- ORGÁNICO -->
         <div class="card">
@@ -990,6 +1025,7 @@
   </script>
 </body>
 </html>
+
 
 
 
