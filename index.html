@@ -672,54 +672,70 @@
 
           <div class="grid grid-2">
             <!-- META ADS -->
-            <div class="card" style="box-shadow:none;border-radius:20px;padding:16px;background:#fbf7f0;">
-              <div class="card-header" style="margin-bottom:8px;">
-                <div>
-                  <div class="card-title" style="font-size:0.95rem;">Meta Ads</div>
-                  <div class="card-subtitle">Campañas de Academy y Campus Navidad</div>
-                </div>
-                <span class="pill-tag"><span></span> Social de pago</span>
-              </div>
+           <!-- META ADS -->
+<div class="card" style="box-shadow:none;border-radius:20px;padding:16px;background:#fbf7f0;">
+  <div class="card-header" style="margin-bottom:8px;">
+    <div>
+      <div class="card-title" style="font-size:0.95rem;">Meta Ads</div>
+      <div class="card-subtitle">Campañas de Academy y Campus Navidad</div>
+    </div>
+    <span class="pill-tag"><span></span> Social de pago</span>
+  </div>
 
-              <div class="grid grid-2">
-                <div class="kpi">
-                  <div class="kpi-label">Gasto total semana</div>
-                  <div class="kpi-value">≈ 300,80&nbsp;€</div>
-                  <div class="kpi-sub">Semana anterior: 109,36&nbsp;€</div>
-                  <div class="kpi-delta negative">
-                    ▲ +175&nbsp;% de inversión
-                  </div>
-                </div>
-                <div class="kpi">
-                  <div class="kpi-label">Clics en enlace (aprox.)</div>
-                  <div class="kpi-value">≈ 3.071</div>
-                  <div class="kpi-sub">Campañas activas de Academy + Navidad</div>
-                  <div class="kpi-delta positive">
-                    ▲ Mucho más tráfico hacia la web
-                  </div>
-                </div>
-              </div>
+  <div class="grid grid-2">
+    <div class="kpi">
+      <div class="kpi-label">Gasto total semana</div>
+      <div class="kpi-value">≈ 300,80&nbsp;€</div>
+      <div class="kpi-sub">Semana anterior: 109,36&nbsp;€</div>
+      <div class="kpi-delta negative">
+        ▲ +175&nbsp;% de inversión
+      </div>
+    </div>
 
-              <div class="section-label">Detalle por campaña</div>
-              <ul class="list-tight">
-                <li>
-                  <strong>F&F Academy – Noviembre:</strong> multiplica por 5 las impresiones y por casi 9 los clics
-                  frente a la semana anterior, con un CTR del 3,17&nbsp;% y un CPC muy bajo (~0,05&nbsp;€). Es la
-                  campaña más eficiente para generar visitas a la Academy.
-                </li>
-                <li>
-                  <strong>Navidad F&F 25/26:</strong> aumenta la inversión, pero su <strong>CTR cae al 0,64&nbsp;%</strong>
-                  y el <strong>CPC ronda los 0,45&nbsp;€</strong>. Estamos pagando más por un público menos interesado,
-                  lo que empeora el CPA global.
-                </li>
-              </ul>
+    <div class="kpi">
+      <div class="kpi-label">Clics en enlace (plataforma)</div>
+      <div class="kpi-value">≈ 3.071</div>
+      <div class="kpi-sub">Suma de campañas activas de Academy + Navidad</div>
+      <div class="kpi-delta positive">
+        ▲ Mucho más tráfico comprado hacia la web
+      </div>
+    </div>
+  </div>
 
-              <p class="small" style="margin-top:6px;">
-                <strong>Lectura:</strong> Meta es capaz de traer mucho tráfico barato cuando el mensaje está bien afinado
-                (caso Academy). En la campaña de Navidad conviene revisar segmentación y creatividades antes de seguir
-                subiendo presupuesto.
-              </p>
-            </div>
+  <!-- Nota de discrepancia con GA4 -->
+  <p class="small" style="margin-top:6px;margin-bottom:10px;">
+    <strong>Clics vs visitas reales:</strong> Meta reporta unos <strong>3.071 clics</strong>, pero
+    en GA4 solo vemos alrededor de <strong>630 usuarios de pago (Paid Social Meta)</strong>.
+    Esta diferencia es normal en social (navegador interno de Instagram, bloqueadores, usuarios
+    que no terminan de cargar la página, etc.). Por eso usamos los <strong>clics de plataforma
+    como indicador de volumen comprado</strong>, pero no como visitas reales.
+  </p>
+
+  <div class="section-label">Detalle por campaña</div>
+  <ul class="list-tight">
+    <li>
+      <strong>F&amp;F Academy – Noviembre:</strong> multiplica por 5 las impresiones y por casi 9
+      los clics frente a la semana anterior, con un CTR en torno al <strong>3,17&nbsp;%</strong> y un
+      <strong>CPC muy bajo (~0,05&nbsp;€)</strong>. Es la campaña más eficiente para generar visitas
+      cualificadas hacia la Academy.
+    </li>
+    <li>
+      <strong>Navidad F&amp;F 25/26:</strong> aumenta la inversión, pero su
+      <strong>CTR cae hasta ~0,64&nbsp;%</strong> y el <strong>CPC ronda los 0,45&nbsp;€</strong>.
+      Estamos pagando más por un público menos interesado, lo que empeora la eficiencia global
+      de la cuenta.
+    </li>
+  </ul>
+
+  <p class="small" style="margin-top:6px;">
+    <strong>Lectura:</strong> Meta es capaz de traer <strong>mucho tráfico barato</strong> cuando el
+    mensaje está bien afinado (caso Academy). En la campaña de Navidad conviene revisar
+    <strong>segmentación y creatividades</strong> antes de seguir subiendo presupuesto, y apoyarse en
+    GA4 solo para validar el comportamiento general de los usuarios, no para medir conversiones
+    de forma exacta.
+  </p>
+</div>
+
 
             <!-- GOOGLE ADS -->
             <div class="card" style="box-shadow:none;border-radius:20px;padding:16px;background:#f4f5fb;">
@@ -949,6 +965,7 @@
   </script>
 </body>
 </html>
+
 
 
 
