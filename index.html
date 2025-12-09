@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -122,6 +124,15 @@
     .pill-ghost strong {
       color: var(--accent-blue);
       font-weight: 600;
+    }
+.note-warning {
+      background: #fff5f2;
+      border: 1px solid #f7c0b7;
+      border-radius: 16px;
+      padding: 10px 12px;
+      font-size: 0.8rem;
+      color: #9b341e;
+      margin-top: 8px;
     }
 
     /* Tabs */
@@ -341,11 +352,11 @@
     }
 
     .kpi-delta.positive {
-      color: var(--accent-green);
+      color: var(--accent-red);
     }
 
     .kpi-delta.negative {
-      color: var(--accent-red);
+      color: var(--accent-green);
     }
 
     .kpi-delta.neutral {
@@ -471,13 +482,13 @@
           Semana cerrada · Datos definitivos
         </div>
         <div class="pill pill-ghost">
-          Semana del <strong>24 al 30 de noviembre de 2025</strong>
+          Semana del <strong>1 al 7 de diciembre de 2025</strong>
         </div>
         <div class="pill pill-ghost">
-          Actualizado el <strong>5 de diciembre de 2025</strong>
+          Actualizado el <strong>9 de diciembre de 2025</strong>
         </div>
         <div class="pill pill-ghost">
-          Comparado con la semana <strong>17–23 noviembre</strong>
+          Comparado con la semana <strong>24–30 noviembre</strong>
         </div>
       </div>
 
@@ -511,30 +522,30 @@
   <!-- Inscripciones totales -->
   <div class="kpi">
     <div class="kpi-label">Inscripciones totales</div>
-    <div class="kpi-value">23</div>
-    <div class="kpi-sub">Semana anterior: 8</div>
+    <div class="kpi-value">17</div>
+    <div class="kpi-sub">Semana anterior: 23</div>
     <div class="kpi-delta positive">
-      ▲ +187,5&nbsp;% vs semana anterior
+      ▲ −26 % vs semana anterior
     </div>
   </div>
 
   <!-- Facturación total -->
   <div class="kpi">
     <div class="kpi-label">Facturación total</div>
-    <div class="kpi-value">3.062,40&nbsp;€</div>
+    <div class="kpi-value">2.670,60 €</div>
     <div class="kpi-sub">Semana anterior: 1.121,40&nbsp;€</div>
     <div class="kpi-delta positive">
-      ▲ +173,1&nbsp;% vs semana anterior
+     ▼ −12,8 % vs semana anterior
     </div>
   </div>
 
   <!-- Gasto publicitario total -->
   <div class="kpi">
     <div class="kpi-label">Gasto publicitario total</div>
-    <div class="kpi-value">361,88&nbsp;€</div>
+    <div class="kpi-value">≈ 220 €</div>
     <div class="kpi-sub">Semana anterior: 109,36&nbsp;€</div>
-    <div class="kpi-delta positive">
-      ▲ +231&nbsp;% vs semana anterior
+    <div class="kpi-delta negative">
+       ▼ −39 % de inversión pagada
     </div>
   </div>
 </div>
@@ -552,44 +563,34 @@
               </div>
 
             <p>
-  La semana pasada (<strong>24–30 de noviembre</strong>) hemos pasado de 
-  <strong>8 a 23 inscripciones</strong> totales (+187,5&nbsp;%), con una facturación que 
-  sube un <strong>173&nbsp;%</strong> hasta los <strong>3.062,40&nbsp;€</strong>. 
-  El gran motor del crecimiento han sido las ventas del 
-  <strong>Campus de Navidad</strong>, que multiplica por casi cuatro sus altas respecto a la semana anterior.
+  Esta semana (1–7 de diciembre) el proyecto sigue creciendo, pero a un ritmo más tranquilo que la semana anterior. Pasamos de 23 a 17 inscripciones totales, con una facturación que baja de 3.062,40 € a 2.670,60 €. La diferencia viene sobre todo del Campus de Navidad, que mantiene muy buen ritmo pero firma menos altas que el gran pico de la semana del 24–30
 </p>
 
 <p>
-  Esta semana hemos metido bastante tráfico, sobre todo desde <strong>Meta</strong>.  
-  Meta dice que ha generado <strong>1.148 clics</strong>, pero cuando miramos GA4 vemos que realmente 
-  llegan a la web <strong>630 usuarios</strong>. 
+  A nivel de inversión, damos un paso sensato: reducimos el gasto en medios pagados de ≈361 € a ≈220 € (Meta + Google Ads), pero seguimos trayendo bastante volumen de tráfico. Meta solo tiene activa la campaña de Navidad y Google Ads (Performance Max) se consolida como el principal generador de usuarios nuevos en la web.
   <br><br>
   Esto es bastante normal porque mucha gente abre la web dentro del navegador interno de Instagram, 
   y por el camino se pierde la sesión. Aun así, es un tráfico <strong>muy potente</strong>.
 </p>
 
 <p>
-  <strong>Google Ads</strong>, por su parte, todavía está en pañales: lleva activo desde el día 27 
-  y solo ha generado <strong>31 clics reales</strong>.  
-  GA4 enseña un número muchísimo más alto (<strong>526 usuarios</strong> etiquetados como <code>google/cpc</code>), 
-  pero eso <strong>no significa</strong> que vengan de la campaña, sino que GA4 mezcla tráfico de otras fuentes 
-  bajo esa etiqueta.
+  Importante: las conversiones en GA4 siguen sin reflejar bien las inscripciones reales. Para este informe estamos usando como fuente de verdad los datos de las inscripciones en la web (WordPress) y usamos GA4 solo para entender tráfico, páginas vistas y comportamiento.
   <br><br>
-  Es decir: Ads aún no está aportando volumen real, pero es normal en sus primeros días de aprendizaje.
+  
 </p>
 
 <p>
-  <strong>En resumen:</strong><br>
-  👉 <strong>Meta</strong> está empujando fuerte y trae tráfico real a la web.<br>
-  👉 <strong>Google Ads</strong> está arrancando y todavía no genera impacto real.<br>
-  👉 Las inscripciones están llegando más por <strong>calentamiento general del tráfico</strong> 
-  que por atribución directa de plataformas (totalmente normal al inicio).<br>
-</p>
-
-              <p class="small">
-                En GA4 todavía no tenemos histórico suficiente para comparar sesiones entre semanas, pero
-                ya se aprecia un flujo estable de visitas hacia la Academy y las páginas del campus.
+  
+<p class="small note-warning">
+                <strong>Nota de datos:</strong> los eventos personalizados
+                <code>inscripcion_academy</code> e <code>inscripcion_campus</code> en GA4
+                apenas registran unas pocas conversiones frente a las
+                <strong>14 inscripciones reales de Campus</strong> y las
+                <strong>3 de Academy</strong>. Hasta que no ajustemos la medición,
+                las plataformas publicitarias y WordPress son la referencia para ventas;
+                GA4 nos sirve sobre todo para analizar <strong>tráfico y comportamiento</strong>.
               </p>
+              
             </div>
           </div>
 
@@ -611,44 +612,30 @@
     <div class="section-label">Football&Fun Academy</div>
     <ul class="list-tight">
       <li>
-        <strong>Altas nuevas:</strong> 3 en la semana (frente a 2 la semana anterior).
-        Facturación asociada: <strong>522,40&nbsp;€</strong> (+18&nbsp;%).
+        <strong>Altas nuevas:</strong> 3 inscripciones en la semana (todas de cuota trimestral). Facturación asociada: 662,40 €.
       </li>
       <li>
-        <strong>Renovaciones:</strong> 1 en la semana (igual que la anterior),
-        facturación estable en <strong>80,80&nbsp;€</strong>.
+        <strong>Renovaciones:</strong> Esta semana no hay renovaciones registradas (vs 1 la semana anterior), pero la facturación de Academy se mantiene en un nivel similar al de la semana previa.
       </li>
       <li>
-        <strong>Tráfico que alimenta Academy:</strong> la mayor parte de los usuarios llega desde
-        <strong>Meta Ads</strong> (Paid Social) y desde <strong>búsquedas en Google</strong>
-        (Organic Search). Google Ads (Paid Search) empieza a sumar, pero aún está en fase de arranque.
+        <strong>Tráfico que alimenta Academy:</strong> La página /academy/ sigue siendo el corazón de la web, con 651 sesiones en la semana y una mejora clara en el tiempo de interacción medio (sube de ~16 s a ~27 s por usuario).
       </li>
     </ul>
 
     <div class="section-label">Campus de Navidad</div>
     <ul class="list-tight">
       <li>
-        <strong>Inscripciones:</strong> pasamos de 5 a <strong>19</strong> en la semana actual
-        (+280&nbsp;%), con una facturación que crece de 599&nbsp;€ a
-        <strong>2.459,20&nbsp;€</strong> (+310&nbsp;%).
+        <strong>Inscripciones:</strong> hubo 14 inscripciones de Campus Navidad en la semana del 1–7 de diciembre (vs 19 la semana anterior). La facturación pasa de 2.459,20 € a 2.008,20 €, una caída aproximada del −18 % tras el gran pico de la semana pasada.
       </li>
       <li>
-        Con unas <strong>~181 sesiones</strong> en la sección de campus, la tasa de conversión
-        aproximada es muy alta (en torno al <strong>10&nbsp;% por sesión</strong>), lo que confirma
-        que la oferta encaja muy bien.
+        Aun así, con solo 71 sesiones en la sección /campus/ seguimos viendo una conversión muy alta si comparamos ventas con número de vistas: quien llega a la zona de Campus está muy caliente y encuentra una oferta que encaja.
       </li>
-      <li>
-        <strong>Tráfico que alimenta Campus:</strong> el grueso de usuarios llega desde
-        <strong>Meta Ads</strong> (campaña de Navidad), reforzado por tráfico
-        <strong>directo</strong> y de <strong>búsqueda orgánica</strong> de gente que ya conoce la marca.
-      </li>
+      
     </ul>
 
-    <div class="section-label">Conclusión rápida</div>
+    <div class="section-label">QUÉ NOS DICEN ESTOS NÚMEROS</div>
     <p class="small">
-      Esta semana el peso de todo está en el <strong>Campus de Navidad</strong>:
-      la Academy mantiene el pulso, pero la palanca de crecimiento a corto plazo es claramente el Campus de Navidad. <strong>Meta</strong> es el canal que más tráfico útil aporta
-      ahora mismo; el orgánico y Google Ads irán ganando peso según vayamos optimizando.
+      El negocio se apoya esta semana sobre todo en el Campus de Navidad, que sigue siendo la palanca principal de facturación aunque baja desde el gran pico de la semana anterior. Academy mantiene un ritmo estable de altas y mejora en calidad de tráfico (más tiempo en página), lo que apunta a buen encaje de público, pero todavía con recorrido para subir la conversión.
     </p>
   </div>
 </div>
@@ -685,53 +672,37 @@
   <div class="grid grid-2">
     <div class="kpi">
       <div class="kpi-label">Gasto total semana</div>
-      <div class="kpi-value">≈ 300,80&nbsp;€</div>
-      <div class="kpi-sub">Semana anterior: 109,36&nbsp;€</div>
+      <div class="kpi-value">150,66 €</div>
+      <div class="kpi-sub">Semana anterior (Navidad + Academy): ~300,80 €</div>
       <div class="kpi-delta negative">
-        ▲ +175&nbsp;% de inversión
+       ▼ Mitad de inversión vs semana pasada
       </div>
     </div>
 
     <div class="kpi">
       <div class="kpi-label">Clics en enlace (plataforma)</div>
-      <div class="kpi-value">≈ 3.071</div>
-      <div class="kpi-sub">Suma de campañas activas de Academy + Navidad</div>
+      <div class="kpi-value">517</div>
+      <div class="kpi-sub">CPC plataforma: ~0,29 €/clic</div>
       <div class="kpi-delta positive">
-        ▲ Mucho más tráfico comprado hacia la web
+        ▼ Menos volumen que la semana del 24–30 (≈3.071 clics)
       </div>
     </div>
   </div>
 
   <!-- Nota de discrepancia con GA4 -->
-  <p class="small" style="margin-top:6px;margin-bottom:10px;">
-    <strong>Clics vs visitas reales:</strong> Meta reporta unos <strong>3.071 clics</strong>, pero
-    en GA4 solo vemos alrededor de <strong>630 usuarios de pago (Paid Social Meta)</strong>.
-    Esta diferencia es normal en social (navegador interno de Instagram, bloqueadores, usuarios
-    que no terminan de cargar la página, etc.). Por eso usamos los <strong>clics de plataforma
-    como indicador de volumen comprado</strong>, pero no como visitas reales.
-  </p>
+  
 
   <div class="section-label">Detalle por campaña</div>
   <ul class="list-tight">
     <li>
-      <strong>F&amp;F Academy – Noviembre:</strong> multiplica por 5 las impresiones y por casi 9
-      los clics frente a la semana anterior, con un CTR en torno al <strong>3,17&nbsp;%</strong> y un
-      <strong>CPC muy bajo (~0,05&nbsp;€)</strong>. Es la campaña más eficiente para generar visitas
-      cualificadas hacia la Academy.
+      Seguimos empujando con una sola campaña de Navidad F&F 25/26, que mantiene un volumen de clics razonable para el presupuesto invertido.
     </li>
     <li>
-      <strong>Navidad F&amp;F 25/26:</strong> aumenta la inversión, pero su
-      <strong>CTR cae hasta ~0,64&nbsp;%</strong> y el <strong>CPC ronda los 0,45&nbsp;€</strong>.
-      Estamos pagando más por un público menos interesado, lo que empeora la eficiencia global
-      de la cuenta.
+      El CPC “de plataforma” es atractivo (~0,29 €), pero cuando miramos GA4 vemos solo 312 usuarios Meta / paid. Es decir, muchos clics se pierden por varios motivos: navegador interno de Instagram, bloqueos de cookies, usuarios que rebotan antes de que GA4 cargue, etc.
     </li>
   </ul>
 
-  <p class="small" style="margin-top:6px;">
-    <strong>Lectura:</strong> Meta es capaz de traer <strong>mucho tráfico barato</strong> cuando el
-    mensaje está bien afinado. A pesar de tener la misma segmentación, en la campaña de Navidad no estamos consiguiendo tanto tráfico así que igual tenemos que revisar copies y creatividades.
-	 Por otro lado, nos apoyaremos en GA4 solo para validar el comportamiento general de los usuarios, no para medir conversiones de forma exacta.
-  </p>
+  
 </div>
 
 
@@ -740,7 +711,7 @@
   <div class="card-header" style="margin-bottom:8px;">
     <div>
       <div class="card-title" style="font-size:0.95rem;">Google Ads</div>
-      <div class="card-subtitle">Arranque de campaña de búsqueda</div>
+      <div class="card-subtitle">Campaña Performance Max</div>
     </div>
     <span class="pill-tag"><span></span> Búsqueda de pago</span>
   </div>
@@ -748,42 +719,29 @@
   <div class="grid grid-2">
     <div class="kpi">
       <div class="kpi-label">Clics (plataforma)</div>
-      <div class="kpi-value">1.510</div>
-      <div class="kpi-sub">Impresiones: 82.700</div>
+      <div class="kpi-value">1,37 mil</div>
+      <div class="kpi-sub">Impresiones: 56,9 mil</div>
       <div class="kpi-delta positive">
-        CTR estimado ~1,8&nbsp;%
-      </div>
+        ▼ 9,3% menos clics y 31,2% menos impresiones </div>
     </div>
     <div class="kpi">
       <div class="kpi-label">Coste &amp; CPC medio</div>
-      <div class="kpi-value">61,08&nbsp;€</div>
-      <div class="kpi-sub">CPC medio: 0,04&nbsp;€/clic</div>
+      <div class="kpi-value">69,33 €</div>
+      <div class="kpi-sub">CPC plataforma: ~0,05 €/clic</div>
       <div class="kpi-delta positive">
-        Tráfico muy barato para un arranque
+       ▲ 25%  más caro que la semana pasada (0,04€)
       </div>
     </div>
   </div>
 
   <!-- Nota de discrepancia con GA4 -->
-  <p class="small" style="margin-top:8px;margin-bottom:8px;">
-    <strong>Qué ve GA4:</strong> en Analytics aparecen unos <strong>526 usuarios etiquetados como
-    google / cpc</strong>. Ese número es más alto que los clics reales de la campaña porque GA4
-    agrupa bajo esa etiqueta también otras visitas (por ejemplo tráfico antiguo o mal etiquetado).
-    Por eso, igual que en Meta, usamos los datos de <strong>Google Ads como fuente oficial de clics
-    y coste</strong>.
-  </p>
+  
 
   <p class="small">
-    <strong>Lectura:</strong> es una campaña muy nueva (arranca el <strong>27/11</strong>), pero los
-    primeros datos son buenos: <strong>muchos clics a bajo coste</strong>. El siguiente paso es
-    conectar estos clics con las inscripciones (cuando GA4 mida bien las conversiones). Hemos probado dos tipos de campaña: Performance Max (la sugerida por Google) y Search.
-	  La de Search no ha funcionado debido a que el volumen de búsquedas para las palabras que nos interesa es tan bajo que ni muestra los anuncios. Prueba fallida. Nos decantamos por continuar por Performace Max.
+    <br><br>Google Ads, con una sola campaña de Performance Max, se comporta como un gran generador de clics muy baratos. Todavía no diferenciamos bien qué parte de esos clics están realmente interesados en Campus/Academy, pero a nivel de coste por sesión es un canal que merece la pena seguir explorando.
 	  
   </p>
-	<p class="small">
-    <strong>Display:</strong> como ya te comenté en el audio podríamos <strong>lanzar una pequeña de Display</strong> que se muestre SOLO a todos aquellos que han  <strong>visitado la web de eskola Athletic</strong> . Dado que seguro que son pocos usuarios, el coste sería bajísimo.
-	  
-  </p>
+	
 </div>
 
           </div>
@@ -798,29 +756,24 @@
   </div>
 
   <p class="small" style="margin-bottom:6px;">
-    Meta y Google Ads reportan su propio CPC en función de los clics que detectan dentro de sus sistemas.
-    Sin embargo, <strong>no todos esos clics llegan realmente a cargar la web</strong>, especialmente en Meta,
-    donde muchos usuarios abren enlaces dentro del navegador interno de la app.
+   Tanto Meta como Google Ads cuentan clics, mientras que GA4 registra usuarios que cargan la web y aceptan (implícita o explícitamente) el tracking. Por eso, siempre veremos menos usuarios en GA4 que clics en las plataformas.
   </p>
 
   <ul class="list-tight">
     <li>
-      <strong>Meta Ads:</strong> aunque la plataforma reporta un CPC muy bajo (~0,09 €),
-      si usamos los usuarios reales que llegan desde GA4 (≈629), el coste por usuario real es
-      de <strong>≈ 0,47 €/usuario</strong>. Esta cifra representa mejor el coste real de visita.
+      <strong>Meta Ads(Navidad):</strong> 517 clics reportados VS. 312 usuarios Meta / paid en GA4.<br>
+➜ CPC plataforma: ~0,29 €.<br>
+➜ CPC por usuario medido en GA4: 150,66 € / 312 ≈ 0,48 €.<br>
     </li>
     <li>
-      <strong>Google Ads:</strong> GA4 todavía no distingue correctamente el tráfico
-      porque mezcla (google / cpc) con tráfico orgánico y de marca.
-      Hasta que el etiquetado UTM esté limpio, el valor válido es el CPC reportado por Ads
-      (<strong>≈1,97 €</strong>).
+      <strong>Google Ads:</strong> 1,37 k clics V.S 538 usuarios Paid Search en GA4.<br>
+➜ CPC plataforma: ~0,05 €.<br>
+➜ CPC por usuario medido en GA4: 69,33 € / 538 ≈ 0,13 €.
     </li>
   </ul>
 
   <p class="small" style="margin-top:6px;">
-    <strong>Conclusión:</strong> Meta genera mucho volumen pero no todos los clics llegan a la web,
-    por lo que su CPC real es más alto que el oficial.
-    En Google Ads, necesitaremos unos días más para medir correctamente todo.
+    <strong>Conclusión:</strong> Conclusión práctica: usamos el CPC de plataforma para optimizar campañas (porque es consistente dentro de cada canal) y el CPC “por usuario en GA4” para tener una visión más realista de lo que cuestan las sesiones que realmente investigan la web.
   </p>
 </div>
 
@@ -839,26 +792,26 @@
           <div class="grid grid-3">
             <div class="kpi">
               <div class="kpi-label">Clics orgánicos (SEO)</div>
-              <div class="kpi-value">31</div>
-              <div class="kpi-sub">Semana anterior: 0</div>
-              <div class="kpi-delta positive">
-                ▲ Empezamos a recibir datos 
+              <div class="kpi-value">86</div>
+              <div class="kpi-sub">Semana anterior: 31</div>
+              <div class="kpi-delta negative">
+               ▲ SEO empieza a despegar (+177 %)
               </div>
             </div>
             <div class="kpi">
               <div class="kpi-label">Impresiones orgánicas</div>
-              <div class="kpi-value">347</div>
-              <div class="kpi-sub">CTR medio: 8,9&nbsp;%</div>
-              <div class="kpi-delta positive">
-                Posición media ~11,9
+              <div class="kpi-value">921</div>
+              <div class="kpi-sub">CTR medio: 9,3 %</div>
+              <div class="kpi-delta negative">
+               ▲ 165,4% más impresiones  (visibilidad en alza)
               </div>
             </div>
             <div class="kpi">
               <div class="kpi-label">Peso por canal (GA4)</div>
-              <div class="kpi-value">≈ 6&nbsp;%</div>
-              <div class="kpi-sub">Del tráfico total viene de Organic Search</div>
+              <div class="kpi-value">≈ 6–7 %</div>
+              <div class="kpi-sub">Del tráfico total de la semana (según GA4)</div>
               <div class="kpi-delta neutral">
-                Mucho margen de crecimiento
+                Sin grandes cambios. Mucho margen de crecimiento
               </div>
             </div>
           </div>
@@ -866,16 +819,13 @@
           <div class="section-label">Cómo interpretar estos datos</div>
           <ul class="list-tight">
             <li>
-              La mayoría de consultas mezclan <strong>búsquedas de marca</strong> con términos
-              muy relacionados con campus de fútbol y porteros.
+              La mayoría de consultas mezclan búsquedas de marca (“football and fun”, “football fun”, “campus futbol navidad…”) con términos muy relacionados con campus de fútbol y porteros.
             </li>
             <li>
-              El CTR alto (casi 9&nbsp;%) y la posición media ~12 indican que cuando aparecemos, el resultado
-              es atractivo. El reto ahora es <strong>aparecer más veces</strong> para esas búsquedas.
+            El CTR alto (~9 %) confirma que, cuando aparecemos en resultados, el mensaje resulta atractivo. El reto ahora es aparecer más veces y escalar el número de impresiones sin perder relevancia.
             </li>
             <li>
-              En GA4, el tráfico Directo ya supone alrededor de un 9&nbsp;% de usuarios: buena señal de que
-              la marca empieza a sonar y la gente entra directamente a la web.
+              En GA4, el tráfico Directo supone ya en torno al 7–9 % de los usuarios, buena señal de que la marca empieza a sonar y la gente entra directamente a la web (guardando la URL, buscando el dominio, etc.).
             </li>
           </ul>
         </div>
@@ -897,26 +847,26 @@
           <div class="grid grid-3">
             <div class="kpi">
               <div class="kpi-label">Sesiones totales</div>
-              <div class="kpi-value">≈ 1.886</div>
-              <div class="kpi-sub">Datos desde 24/11</div>
-              <div class="kpi-delta neutral">
-                Punto de partida para futuras semanas
+              <div class="kpi-value">≈ 1.330</div>
+              <div class="kpi-sub">Datos del 1–7 de diciembre</div>
+              <div class="kpi-delta positive">
+                ≈ –29 % de sesiones vs semana anterior
               </div>
             </div>
             <div class="kpi">
               <div class="kpi-label">Tasa de conversión global</div>
-              <div class="kpi-value">≈ 1,2&nbsp;%</div>
-              <div class="kpi-sub">23 inscripciones / 1.886 sesiones</div>
-              <div class="kpi-delta neutral">
-                Correcta para un lanzamiento, mejorable
+              <div class="kpi-value">≈ 1,3&nbsp;%</div>
+              <div class="kpi-sub">17 inscripciones / 1.330 sesiones</div>
+              <div class="kpi-delta negative">
+                Ligera  mejora  de ~+8 % semana a semana
               </div>
             </div>
             <div class="kpi">
               <div class="kpi-label">Páginas clave</div>
-              <div class="kpi-value">Academy 57&nbsp;%</div>
+              <div class="kpi-value">Academy 55&nbsp;%</div>
               <div class="kpi-sub">Del tráfico total</div>
               <div class="kpi-delta neutral">
-                Campus y productos PRO/Porteros crecen
+                PRO y Mini muestran comportamientos de usuarios más especializados y con mucha interacción.
               </div>
             </div>
           </div>
@@ -924,34 +874,18 @@
           <div class="section-label">Cómo navegan los usuarios</div>
          <ul class="list-tight">
   <li>
-    La página <code>/academy/</code> concentra el <strong>57 % de las sesiones</strong>, pero su 
-    <strong>conversión estimada es baja (~0,4 %)</strong>. El usuario entra, mira poco tiempo 
-    (<strong>16 s</strong>) y rebota en un <strong>78 %</strong> de los casos. Hay margen de mejora en 
-    mensaje, jerarquía de contenidos y claridad del formulario.
+    La página /academy/ concentra aproximadamente la mitad de las sesiones. Es el núcleo de la web, y aún tiene margen para mejorar textos, jerarquía y formularios para convertir mejor ese tráfico.
   </li>
 
   <li>
-    La sección <code>/campus/</code> recibe menos tráfico (~181 sesiones), pero muestra una 
-    <strong>conversión muy alta</strong> (19 inscripciones) y un tiempo de permanencia notable 
-    (<strong>40 s</strong>). La oferta encaja muy bien y el usuario lo valida rápidamente.
+   La sección /campus/ recibe menos visitas (~71 sesiones), pero con una proporción muy alta de inscripciones, lo que refuerza que la oferta de Navidad está muy bien alineada con la intención del usuario.
   </li>
 
   <li>
-    Las páginas de producto (<code>/footballfun-pro/</code>, <code>/footballfun-porteros/</code>, 
-    <code>/mini/</code>) tienen <strong>tiempos de interacción muy altos</strong> 
-    (entre 97 y 155 s) y rebotes bajos. El usuario entiende la propuesta de valor y se queda leyendo.
+   Las páginas de producto avanzado (/footballfun-pro/, /footballfun-porteros/) muestran mucho tiempo de interacción (más de 3 minutos de media en algunos casos), señal de interés fuerte por parte de públicos más especializados.
   </li>
 
-  <li>
-    El canal <strong>Paid Social</strong> (Meta) es la principal fuente de tráfico real (~629 usuarios), 
-    seguido de <strong>Paid Search</strong> (~526 usuarios, aunque muy inflados por GA4). 
-    <strong>Email</strong> trae poco volumen pero usuarios de calidad.
-  </li>
-
-  <li>
-    El <strong>SEO</strong> empieza a despegar: 31 clics Search Console → 87 usuarios GA4, con un 
-    CTR orgánico del <strong>8,9 %</strong> y posición media <strong>~11,9</strong>.
-  </li>
+ 
 
   <li>
     GA4 todavía <strong>no mide bien las conversiones</strong> (solo detecta 3 de Academy + 3 de Campus). 
@@ -974,27 +908,16 @@
 
           <ul class="list-tight">
             <li>
-              <strong>Reforzar lo que ya funciona a futuro:</strong> META. Es lo que más tráfico da y su CPC es muy bajo. Eso si, asegurar que todo
-              ese tráfico aterriza en páginas de alta conversión.
+              <strong>Meta · Navidad:</strong> mantener la inversión alrededor de los niveles actuales mientras siga habiendo demanda de Campus. Probar nuevas creatividades (mensajes por turno, plazas limitadas, urgencia suave) y testear formatos de vídeo cortos que muestren ambiente de campus.
             </li>
            
             <li>
-              <strong>Optimizar Google Ads:</strong> si queremos atacar a la competencia, campaña de Display a aquellos que hayan visitado Eskola Athletic.
+              <strong>Google Ads:</strong> seguir consolidando Performance Max como fuente de usuarios nuevos, pero revisando términos de búsqueda para detectar keywords que no aporten negocio y añadirlas como negativas. A medio plazo, valorar campañas de búsqueda más específicas (por sedes, “tecnificación fútbol Bizkaia”, etc.) y Display de remarketing.
             </li>
             <li>
-              <strong>Impulsar SEO:</strong> mejorar títulos y metadescripciones de las páginas clave,
-              aprovechar las consultas que ya aparecen en Search Console (“campus porteros navidad 2025”,
-              “campus de futbol bizkaia”, etc.) y crear contenidos que consolidan la autoridad local.
-            </li>
-            <li>
-              <strong>Mejorar la conversión de Academy:</strong> simplificar el mensaje de la página,
-              destacar claramente edades, beneficios y cómo funcionan las sesiones, y reducir fricciones
-              en el proceso de inscripción. ¿Posibilidad de replicar carrito abandonado? O  campaña de retargeting para los que visiten y no compren.
-            </li>
-            <li>
-              <strong>Construir marca a medio plazo:</strong> seguir alimentando redes sociales, emailing
-              y colaboraciones locales para aumentar el peso del tráfico Directo y Orgánico frente al
-              tráfico de pago, reduciendo la dependencia de las campañas a largo plazo.
+              <strong>Productos PRO / Porteros: </strong> el alto tiempo de permanencia indica interés real.            </li>
+                        <li>
+              <strong>Medición y datos:</strong> Arreglar conversiones en GA4 para inscripcion_academy e inscripcion_campus, garantizando que todos los pasos de pago llevan a las páginas de agradecimiento correctas y que el evento dispara siempre.
             </li>
           </ul>
         </div>
@@ -1025,20 +948,6 @@
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
