@@ -1,13 +1,10 @@
 
-
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <title>Football&Fun · Weekly Performance Report</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- Poppins -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -26,11 +23,7 @@
       --radius-xl: 28px;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -39,49 +32,31 @@
       padding: 24px;
     }
 
-    .page {
-      max-width: 1120px;
-      margin: 0 auto 64px;
-    }
-
-    header {
-      margin-bottom: 24px;
-    }
+    .page { max-width: 1120px; margin: 0 auto 64px; }
+    header { margin-bottom: 24px; }
 
     .logo-row {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      margin-bottom: 12px;
-      flex-wrap: wrap;
+      display: flex; align-items: center; gap: 16px;
+      margin-bottom: 12px; flex-wrap: wrap;
     }
 
     .logo {
-      width: 52px;
-      height: 52px;
-      border-radius: 999px;
-      background: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      width: 52px; height: 52px; border-radius: 999px;
+      background: #fff; display: flex; align-items: center; justify-content: center;
       box-shadow: 0 12px 30px rgba(0,0,0,0.08);
       overflow: hidden;
     }
 
-    .logo img {
-      width: 40px;
-      height: 40px;
-      object-fit: contain;
-    }
+    .logo img { width: 40px; height: 40px; object-fit: contain; }
 
     h1 {
-  font-size: clamp(1.8rem, 2.4vw, 2.3rem);
-  font-weight: 700;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: var(--accent-blue);
-  line-height: 1.15;       /* interlineado más compacto */
-}
+      font-size: clamp(1.8rem, 2.4vw, 2.3rem);
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: var(--accent-blue);
+      line-height: 1.15;
+    }
 
     .subtitle {
       font-size: 0.9rem;
@@ -91,42 +66,22 @@
     }
 
     .pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 8px;
-      margin-top: 16px;
-      font-size: 0.85rem;
+      display: flex; flex-wrap: wrap; align-items: center;
+      gap: 8px; margin-top: 16px; font-size: 0.85rem;
     }
 
     .pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      border-radius: 999px;
-      padding: 6px 14px;
-      background: #fff;
-      border: 1px solid var(--border-soft);
-      color: var(--text-muted);
-      white-space: nowrap;
+      display: inline-flex; align-items: center; gap: 6px;
+      border-radius: 999px; padding: 6px 14px;
+      background: #fff; border: 1px solid var(--border-soft);
+      color: var(--text-muted); white-space: nowrap;
     }
 
-    .pill-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: #32c971;
-    }
+    .pill-dot { width: 8px; height: 8px; border-radius: 50%; background: #32c971; }
+    .pill-ghost { background: transparent; }
+    .pill-ghost strong { color: var(--accent-blue); font-weight: 600; }
 
-    .pill-ghost {
-      background: transparent;
-    }
-
-    .pill-ghost strong {
-      color: var(--accent-blue);
-      font-weight: 600;
-    }
-.note-warning {
+    .note-warning {
       background: #fff5f2;
       border: 1px solid #f7c0b7;
       border-radius: 16px;
@@ -136,63 +91,36 @@
       margin-top: 8px;
     }
 
-    /* Tabs */
+    .tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; margin-bottom: 20px; padding-bottom: 4px; }
 
-    .tabs {
-  display: flex;
-  flex-wrap: wrap;          /* que se rompan de línea, nada de scroll horizontal */
-  gap: 8px;
-  margin-top: 24px;
-  margin-bottom: 20px;
-  padding-bottom: 4px;
-}
-
-.tab-btn {
-  border-radius: 999px;
-  padding: 8px 18px;
-  font-size: 0.9rem;
-  cursor: pointer;
-  flex-shrink: 0;
-  border: 1px solid var(--border-soft);
-  background: #ffffff;                      /* fondo claro aunque esté inactivo */
-  color: var(--text-muted);
-  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease,
-              box-shadow 0.2s ease;
-}
-
-.tab-btn.active {
-  background: var(--accent-blue);
-  color: #fff;
-  border-color: var(--accent-blue);
-  box-shadow: 0 10px 24px rgba(6, 24, 47, 0.28);
-}
-
-.tab-btn:not(.active):hover {
-  background: #f4f5fb;
-  border-color: var(--accent-blue);
-  color: var(--accent-blue);
-}
-
-
-    .tab-panels {
-      margin-top: 6px;
+    .tab-btn {
+      border-radius: 999px; padding: 8px 18px; font-size: 0.9rem; cursor: pointer;
+      flex-shrink: 0; border: 1px solid var(--border-soft);
+      background: #ffffff; color: var(--text-muted);
+      transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
     }
 
-    .tab-panel {
-      display: none;
-      animation: fadeIn 0.22s ease-out;
+    .tab-btn.active {
+      background: var(--accent-blue);
+      color: #fff;
+      border-color: var(--accent-blue);
+      box-shadow: 0 10px 24px rgba(6, 24, 47, 0.28);
     }
 
-    .tab-panel.active {
-      display: block;
+    .tab-btn:not(.active):hover {
+      background: #f4f5fb;
+      border-color: var(--accent-blue);
+      color: var(--accent-blue);
     }
+
+    .tab-panels { margin-top: 6px; }
+    .tab-panel { display: none; animation: fadeIn 0.22s ease-out; }
+    .tab-panel.active { display: block; }
 
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(4px); }
       to   { opacity: 1; transform: translateY(0); }
     }
-
-    /* Cards & layout */
 
     .card {
       background: var(--bg-card);
@@ -202,102 +130,42 @@
       border: 1px solid rgba(255,255,255,0.6);
     }
 
-    .card + .card {
-      margin-top: 18px;
-    }
+    .card + .card { margin-top: 18px; }
 
     .card-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 14px;
-      flex-wrap: wrap;
+      display: flex; justify-content: space-between; align-items: center;
+      gap: 12px; margin-bottom: 14px; flex-wrap: wrap;
     }
 
-    .card-title {
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--accent-blue);
-    }
-
-    .card-subtitle {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
+    .card-title { font-size: 1rem; font-weight: 600; color: var(--accent-blue); }
+    .card-subtitle { font-size: 0.85rem; color: var(--text-muted); }
 
     .chip {
-      font-size: 0.75rem;
-      border-radius: 999px;
-      padding: 5px 10px;
-      background: var(--accent-gold-soft);
-      color: var(--accent-gold);
-      white-space: nowrap;
+      font-size: 0.75rem; border-radius: 999px; padding: 5px 10px;
+      background: var(--accent-gold-soft); color: var(--accent-gold); white-space: nowrap;
     }
 
-    .chip-soft {
-      background: #f2f1f5;
-      color: var(--text-muted);
-    }
+    .chip-soft { background: #f2f1f5; color: var(--text-muted); }
 
-    .grid {
-      display: grid;
-      gap: 16px;
-    }
-
-    .grid-2 {
-      grid-template-columns: repeat(2, minmax(0,1fr));
-    }
-
-    .grid-3 {
-      grid-template-columns: repeat(3, minmax(0,1fr));
-    }
-
-    .grid-4 {
-      grid-template-columns: repeat(4, minmax(0,1fr));
-    }
+    .grid { display: grid; gap: 16px; }
+    .grid-2 { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    .grid-3 { grid-template-columns: repeat(3, minmax(0,1fr)); }
+    .grid-4 { grid-template-columns: repeat(4, minmax(0,1fr)); }
 
     @media (max-width: 960px) {
-      .grid-4 {
-        grid-template-columns: repeat(2, minmax(0,1fr));
-      }
-      .grid-3 {
-        grid-template-columns: repeat(2, minmax(0,1fr));
-      }
-      .grid-2 {
-        grid-template-columns: 1fr;
-      }
+      .grid-4 { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .grid-3 { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .grid-2 { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 640px) {
-      body {
-        padding: 16px 12px 32px;
-      }
-      .card {
-        border-radius: 22px;
-        padding: 18px 16px 16px;
-      }
-	  .kpi-value {
-    font-size: 1.25rem;   /* un poquito más pequeño en pantallas estrechas */
-  }
-	  
-	  h1 {
-    font-size: 1.6rem;
-    line-height: 1.15;
-  }
-
-	   .tabs {
-    gap: 6px;
-  }
-
-  .tab-btn {
-    flex: 1 1 calc(50% - 6px);   /* dos botones por fila en móvil */
-    text-align: center;
-    padding: 8px 4px;
-  }
+      body { padding: 16px 12px 32px; }
+      .card { border-radius: 22px; padding: 18px 16px 16px; }
+      .kpi-value { font-size: 1.25rem; }
+      h1 { font-size: 1.6rem; line-height: 1.15; }
+      .tabs { gap: 6px; }
+      .tab-btn { flex: 1 1 calc(50% - 6px); text-align: center; padding: 8px 4px; }
     }
-
-    /* KPI cards */
 
     .kpi {
       border-radius: 18px;
@@ -309,39 +177,16 @@
       gap: 6px;
     }
 
-    .kpi-label {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-    }
-	 h1 {
-    font-size: 1.6rem;
-    line-height: 1.15;
-  }
+    .kpi-label { font-size: 0.8rem; color: var(--text-muted); }
 
-  .subtitle {
-    font-size: 0.85rem;
-  }
-
-  .pill-row {
-    margin-top: 10px;
-    gap: 6px;
-  }
-
-  .pill {
-    padding: 5px 10px;
-    font-size: 0.78rem;
-  }
     .kpi-value {
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: var(--accent-blue);
-  white-space: nowrap;   /* que no parta el número */
-}
-
-    .kpi-sub {
-      font-size: 0.75rem;
-      color: var(--text-muted);
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--accent-blue);
+      white-space: nowrap;
     }
+
+    .kpi-sub { font-size: 0.75rem; color: var(--text-muted); }
 
     .kpi-delta {
       font-size: 0.8rem;
@@ -352,80 +197,42 @@
       margin-top: 2px;
     }
 
-    .kpi-delta.positive {
-      color: var(--accent-red);
-    }
-
-    .kpi-delta.negative {
-      color: var(--accent-green);
-    }
-
-    .kpi-delta.neutral {
-      color: var(--text-muted);
-    }
+    .kpi-delta.positive { color: var(--accent-red); }   /* ojo: en tu template “positive” era rojo */
+    .kpi-delta.negative { color: var(--accent-green); } /* y “negative” verde */
+    .kpi-delta.neutral  { color: var(--text-muted); }
 
     .badge-pill {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 999px;
-      border: 1px dashed var(--border-soft);
-      padding: 8px 10px;
-      font-size: 0.72rem;
-      color: var(--text-muted);
-      max-width: 8rem;
-      text-align: center;
+      display: inline-flex; align-items: center; justify-content: center;
+      border-radius: 999px; border: 1px dashed var(--border-soft);
+      padding: 8px 10px; font-size: 0.72rem; color: var(--text-muted);
+      max-width: 8rem; text-align: center;
     }
 
-    /* Text content */
+    p { font-size: 0.9rem; line-height: 1.6; color: var(--text-main); }
+    p + p { margin-top: 8px; }
 
-    p {
-      font-size: 0.9rem;
-      line-height: 1.6;
-      color: var(--text-main);
-    }
+    .small { font-size: 0.8rem; color: var(--text-muted); }
 
-    p + p {
-      margin-top: 8px;
-    }
-
-    .small {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-    }
-
-    ul {
-      list-style: none;
-      margin-top: 4px;
-    }
+    ul { list-style: none; margin-top: 4px; }
 
     ul li {
-      font-size: 0.9rem;
-      line-height: 1.6;
-      padding-left: 18px;
-      position: relative;
-      color: var(--text-main);
+      font-size: 0.9rem; line-height: 1.6; padding-left: 18px;
+      position: relative; color: var(--text-main);
     }
 
     ul li::before {
       content: "•";
       position: absolute;
-      left: 4px;
-      top: 0;
+      left: 4px; top: 0;
       color: var(--accent-gold);
       font-size: 1rem;
     }
 
-    .list-tight li {
-      margin-bottom: 4px;
-    }
+    .list-tight li { margin-bottom: 4px; }
 
     .section-label {
-      font-size: 0.85rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--text-muted);
+      font-size: 0.85rem; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--text-muted);
       margin: 12px 0 10px;
     }
 
@@ -440,23 +247,12 @@
       gap: 4px;
     }
 
-    .pill-tag span {
-      width: 8px;
-      height: 8px;
-      border-radius: 999px;
-      background: var(--accent-blue);
-    }
+    .pill-tag span { width: 8px; height: 8px; border-radius: 999px; background: var(--accent-blue); }
 
-    .two-col {
-      display: grid;
-      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
-      gap: 18px;
-    }
+    .two-col { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 18px; }
 
     @media (max-width: 880px) {
-      .two-col {
-        grid-template-columns: 1fr;
-      }
+      .two-col { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -466,8 +262,7 @@
     <header>
       <div class="logo-row">
         <div class="logo">
-          <!-- Usa aquí tu logo real -->
-         <img src="Escudo-sin-Subtitulo-1.png" alt="Logo Football&Fun" class="logo">
+          <img src="Escudo-sin-Subtitulo-1.png" alt="Logo Football&Fun" class="logo">
         </div>
         <div>
           <h1>Football&Fun · Weekly Performance Report</h1>
@@ -483,13 +278,13 @@
           Semana cerrada · Datos definitivos
         </div>
         <div class="pill pill-ghost">
-          Semana del <strong>8 al 14 de diciembre de 2025</strong>
+          Semana del <strong>15 al 21 de diciembre de 2025</strong>
         </div>
         <div class="pill pill-ghost">
-          Actualizado el <strong>15 de diciembre de 2025</strong>
+          Actualizado el <strong>22 de diciembre de 2025</strong>
         </div>
         <div class="pill pill-ghost">
-          Comparado con la semana <strong>1-7 diciembre</strong>
+          Comparado con la semana <strong>8–14 diciembre</strong>
         </div>
       </div>
 
@@ -519,30 +314,39 @@
                 </div>
               </div>
 
-             <div class="grid grid-2 grid-4">
-  <!-- Inscripciones totales -->
-  <div class="kpi">
-    <div class="kpi-label">Inscripciones totales</div>
-    <div class="kpi-value">11</div>
-    <div class="kpi-sub">Semana anterior: 17</div>
-    <div class="kpi-delta positive">
-      ▼ −35,3 vs semana anterior
-    </div>
-  </div>
+              <div class="grid grid-2 grid-4">
+                <!-- Inscripciones totales -->
+                <div class="kpi">
+                  <div class="kpi-label">Inscripciones totales</div>
+                  <div class="kpi-value">22</div>
+                  <div class="kpi-sub">Semana anterior: 11</div>
+                  <div class="kpi-delta negative">
+                    ▲ +100 % vs semana anterior
+                  </div>
+                </div>
 
-  
+                <!-- Gasto publicitario total -->
+                <div class="kpi">
+                  <div class="kpi-label">Gasto publicitario total</div>
+                  <div class="kpi-value">267,85 €</div>
+                  <div class="kpi-sub">Semana anterior: 323,44 €</div>
+                  <div class="kpi-delta positive">
+                    ▼ −17 % de inversión pagada
+                  </div>
+                </div>
 
-  <!-- Gasto publicitario total -->
-  <div class="kpi">
-    <div class="kpi-label">Gasto publicitario total</div>
-    <div class="kpi-value">323,44 €</div>
-    <div class="kpi-sub">Semana anterior: 220 €</div>
-    <div class="kpi-delta negative">
-       ▲ +47 % de inversión pagada
-    </div>
-  </div>
-</div>
+                
 
+                <!-- ROAS proxy -->
+                <div class="kpi">
+                  <div class="kpi-label">Ingresos / Gasto en ads</div>
+                  <div class="kpi-value">≈ 12,2x</div>
+                  <div class="kpi-sub">3.266,60 € / 267,85 €</div>
+                  <div class="kpi-delta neutral">
+                    *por cada 1 € invertido en anuncios, han entrado ~12,2 € en ingresos.
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div class="card">
@@ -555,69 +359,71 @@
                 </div>
               </div>
 
-            <p>
-  A nivel publicitario, se incrementa la actividad en medios pagados, especialmente en Google Ads, con dos campañas activas (Performance Max y Display) y la campaña de Navidad activa en Meta. Esto se traduce en un fuerte aumento del tráfico pagado, que se consolida como el principal generador de usuarios nuevos en la web. <strong>El coste por clic se mantiene en rangos razonables</strong>, especialmente en Performance Max, lo que indica una <strong>buena eficiencia en la captación de visitas</strong>.
-</p>
-
-<p>
-  En SEO y marca, Search Console muestra una presencia orgánica estable, con un peso importante de búsquedas de marca y términos muy relacionados con Football&Fun. El CTR orgánico sigue siendo alto, señal de que cuando aparecemos en resultados de búsqueda, el interés del usuario es real. El <strong>margen de crecimiento</strong> sigue estando en <strong>ganar más volumen de impresiones</strong>.
-  <br><br>
-  En cuanto al comportamiento en la web, la <strong>página /academy/</strong> continúa siendo el <strong>núcleo de navegación</STRONG>, concentrando la mayor parte de las sesiones, mientras que /campus/, aunque recibe menos tráfico, vuelve a mostrar muy buenos indicadores de calidad (tiempo de interacción alto y baja tasa de rebote), lo que refuerza que la oferta de Campus Navidad está bien alineada con la intención del usuario.
-</p>
-
-<p>
-  <strong>Importante:</strong> destaca el papel del email marketing: aunque aporta poco volumen, es uno de los canales más cualificados, con tiempos de interacción muy altos y un comportamiento claramente superior a Paid Social y Paid Search. Esto confirma que el <strong>email juega un rol clave en el proceso de decisión.</strong>
-  <br><br>
-  
-</p>
-
-<p class="small note-warning">
-                <strong>Conclusión operativa:</strong> Campus está “producto-market-fit” y hay que seguir alimentándolo con tráfico cualificado; Academy necesita optimización de conversión (mensaje, estructura y formulario) para transformar el volumen actual en altas.
-    </p>
+              <p>
+                Semana de <strong>cierre y conversión</strong> (especialmente en Campus): con <strong>22 inscripciones</strong> duplicamos el volumen de la semana anterior.
+                El driver principal ha sido <strong>Campus Navidad</strong> (19 inscripciones), con un mix muy claro: <strong>PRO (16)</strong>, <strong>MINI (2)</strong> y <strong>PORTEROS (1)</strong>.
+                Academy suma <strong>3 inscripciones</strong> (2 anuales Jugadores/as + 1 mensual Porteros).
               </p>
-  
 
+              <p>
+                En medios pagados, <strong>mantenemos eficiencia</strong> con menos inversión:
+                <strong>Meta</strong> gasta <strong>147,85 €</strong> (354 clics enlace, CPC 0,42 €) y funciona como canal de apoyo/recuerdo;
+                <strong>Google Ads</strong> gasta <strong>120 €</strong> (988 clics, CPC 0,12 €) y sigue siendo el motor de volumen, aunque esta semana con enfoque más “upper funnel” (muchas interacciones a muy bajo coste, especialmente en Performance Max).
+              </p>
+
+              <p>
+                En web (GA4), se confirma el patrón de intención:
+                <strong>/academy/</strong> absorbe el grueso del tráfico (<strong>2.142 sesiones</strong>) pero sigue con rebote alto (~<strong>65%</strong>) típico de tráfico frío;
+                <strong>/campus/</strong> y páginas de modalidad (PRO/MINI/PORTEROS) muestran <strong>rebote muy bajo</strong> (≈ 8–10%) y <strong>tiempos de interacción muy altos</strong>, señal de usuario “en decisión”.
+              </p>
+
+              <p class="small note-warning">
+                <strong>Conclusión operativa:</strong> el producto Campus está en “modo venta” y convierte con poco tráfico si el público es correcto.
+                Academy necesita empujar conversión (CTA, claridad de planes, fricción de formulario) para transformar el gran volumen de visitas en altas de plan.
+              </p>
             </div>
           </div>
 
           <!-- Columna derecha -->
-<div>
-  <div class="card">
-    <div class="card-header">
-      <h2 class="card-title">De dónde vienen las inscripciones</h2>
-      <span class="chip chip-soft">Foto simplificada por tipo de producto</span>
-    </div>
+          <div>
+            <div class="card">
+              <div class="card-header">
+                <h2 class="card-title">De dónde vienen las inscripciones</h2>
+                <span class="chip chip-soft">Foto simplificada por tipo de producto</span>
+              </div>
 
-    
+              <div class="section-label">Football&Fun Academy (3)</div>
+              <ul class="list-tight">
+                
+                <li>
+                  <strong>Tráfico que alimenta Academy:</strong> /academy/ registra <strong>2.142 sesiones</strong> y <strong>33 s</strong> de interacción media por usuario activo (ponderada).
+                  El rebote sigue alto (~<strong>65%</strong>), coherente con el peso de Paid Search (Google CPC) empujando tráfico frío.
+                </li>
+                <li>
+                  <strong>Lectura:</strong> hay volumen suficiente para vender más, pero falta “cierre” (propuesta/beneficio/CTA + fricción de inscripción).
+                </li>
+              </ul>
 
-    <div class="section-label">Football&Fun Academy</div>
-    <ul class="list-tight">
-      
-      <li>
-        <strong>Tráfico que alimenta Academy:</strong> La página /academy/ sigue siendo el corazón absoluto de la web: 1.464 sesiones en la semana (vs 651 la semana anterior, +125%) y 1.257 usuarios activos. Además, mejora la calidad del consumo: el tiempo medio de interacción sube a ~33 s/usuario (vs ~27 s), lo que indica que la gente lee más y “explora” mejor el contenido.
-Pero sigue habiendo una señal clara de fricción: el rebote es alto (~68%), típico de una página que recibe mucho tráfico frío (paid) y donde aún hay margen para claridad de oferta + CTA + formulario. Es decir: Academy atrae, pero todavía convierte menos de lo que podría.
-      </li>
-    </ul>
+              <div class="section-label">Campus Navidad (19)</div>
+              <ul class="list-tight">
+                
+                <li>
+                  <strong>Calidad de tráfico:</strong> /campus/ mantiene un patrón excelente:
+                  <strong>241 sesiones</strong>, <strong>~57 s</strong> de interacción media y rebote bajísimo (~<strong>8%</strong>).
+                </li>
+                <li>
+                  <strong>Lectura:</strong> Campus no necesita miles de visitas; necesita llegar al usuario correcto y, cuando llega, decide.
+                </li>
+              </ul>
 
-    <div class="section-label">Campus de Navidad</div>
-    <ul class="list-tight">
-      
-      <li>
-        <strong>Tráfico que alimenta Campus:</strong> La sección /campus/ mantiene un patrón muy sano: poco volumen pero muy buena calidad. Esta semana registra 129 sesiones (vs 71, +82%) y ~44 s de interacción media, con un rebote bajo (~24%). Esto es una señal fuerte de intención: quien llega a Campus no viene a curiosear, viene a informarse y decidir.
-En paralelo, las inscripciones reales confirman el encaje de la oferta: 11 altas (10 PRO + 1 Porteros). Con este mix, la lectura es clara: Campus no necesita miles de visitas para funcionar; necesita que llegue el público correcto (y cuando llega, se queda y avanza).
-      </li>
-      
-    </ul>
-
-    <div class="section-label">QUÉ NOS DICEN ESTOS NÚMEROS</div>
-    <p class="small">
-      El tráfico ha subido muchísimo y además se comporta mejor (más tiempo en página). El punto está en la conversión: Academy está absorbiendo tráfico masivo (sobre todo de campañas) con rebote alto, lo que sugiere que el usuario llega pero no termina de ver claro qué incluye, por qué elegirlo y cómo apuntarse rápido.<br><br>
-
-A nivel de adquisición, el crecimiento de usuarios viene sobre todo de Paid Search (1.136 usuarios) y Paid Social (196), y se nota que el email aunque trae poco volumen (27 usuarios), es de los canales más cualificados: ~109 s de interacción media y mejor comportamiento que Paid Social/Paid Search.<br><br>
-    </p>
-  </div>
-</div>
-
+              <div class="section-label">QUÉ NOS DICEN ESTOS NÚMEROS</div>
+              <p class="small">
+                La semana se ha ganado en el último tramo del funnel: el usuario que entra en páginas de modalidad (PRO/MINI/PORTEROS) muestra
+                engagement altísimo y rebote muy bajo, típico de intención fuerte.
+                Por contra, Academy sigue siendo un “hub” de adquisición donde entra mucho usuario nuevo por campañas, y ahí está el mayor margen de optimización de conversión.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -637,98 +443,102 @@ A nivel de adquisición, el crecimiento de usuarios viene sobre todo de Paid Sea
 
           <div class="grid grid-2">
             <!-- META ADS -->
-           <!-- META ADS -->
-<div class="card" style="box-shadow:none;border-radius:20px;padding:16px;background:#fbf7f0;">
-  <div class="card-header" style="margin-bottom:8px;">
-    <div>
-      <div class="card-title" style="font-size:0.95rem;">Meta Ads</div>
-      <div class="card-subtitle">Campañas de Academy y Campus Navidad</div>
-    </div>
-    <span class="pill-tag"><span></span> Social de pago</span>
-  </div>
+            <div class="card" style="box-shadow:none;border-radius:20px;padding:16px;background:#fbf7f0;">
+              <div class="card-header" style="margin-bottom:8px;">
+                <div>
+                  <div class="card-title" style="font-size:0.95rem;">Meta Ads</div>
+                  <div class="card-subtitle">Campaña Navidad F&F 25/26 (15–21 dic)</div>
+                </div>
+                <span class="pill-tag"><span></span> Social de pago</span>
+              </div>
 
-  <div class="grid grid-2">
-    <div class="kpi">
-      <div class="kpi-label">Gasto total semana</div>
-      <div class="kpi-value">139,69 €</div>
-      <div class="kpi-sub">Semana anterior (Navidad + Academy): 150,66 €</div>
-      <div class="kpi-delta negative">
-       ▼ –7 % de inversión, manteniendo presencia constante.
-      </div>
-    </div>
+              <div class="grid grid-2">
+                <div class="kpi">
+                  <div class="kpi-label">Gasto total semana</div>
+                  <div class="kpi-value">147,85 €</div>
+                  <div class="kpi-sub">CPC enlace: 0,42 €</div>
+                  <div class="kpi-delta neutral">
+                    Presencia estable (campaña de recuerdo/impacto)
+                  </div>
+                </div>
 
-    <div class="kpi">
-      <div class="kpi-label">Clics en enlace (plataforma)</div>
-      <div class="kpi-value">400</div>
-      <div class="kpi-sub">CPC plataforma: ~0,35 €/clic</div>
-      <div class="kpi-delta positive">
-        ▼ Menos volumen que semanas anteriores, pero tráfico más controlado
-      </div>
-    </div>
-  </div>
+                <div class="kpi">
+                  <div class="kpi-label">Clics en enlace</div>
+                  <div class="kpi-value">354</div>
+                  <div class="kpi-sub">Alcance: 12.414 · Impresiones: 39.053 · Frecuencia: 3,15</div>
+                  <div class="kpi-delta neutral">
+                    Buen volumen de clics para el gasto
+                  </div>
+                </div>
+              </div>
 
-  <!-- Nota de discrepancia con GA4 -->
-  
+              <div class="section-label">Detalle e interpretación</div>
+              <ul class="list-tight">
+                <li>
+                  Meta aquí está funcionando más como <strong>asistente</strong> (marca + recordatorio) que como canal de cierre directo (no se ven conversiones atribuidas en la vista de campaña).
+                </li>
+                <li>
+                  En GA4, Paid Social (Meta / paid) aporta <strong>124 usuarios</strong>, con <strong>36,3 s</strong> de interacción media por usuario activo: calidad correcta para social.
+                </li>
+                <li>
+                  Recomendación: mantener creatividades “Campus” muy claras (plazas/fechas/modalidades) y reforzar CTA a páginas de modalidad (PRO/MINI/PORTEROS), donde el usuario sí decide.
+                </li>
+              </ul>
+            </div>
 
-  <div class="section-label">Detalle por campaña</div>
-  <ul class="list-tight">
-    <li>
-      Esta semana Meta ha funcionado como canal de apoyo, no como gran generador de volumen.
-    </li>
-    <li>
-      En GA4 se registran 196 usuarios Paid Social, lo que confirma una pérdida parcial de clics entre plataforma y Analytics (navegador interno de Instagram, bloqueos de cookies, rebote antes de cargar GA4, etc.).
-    </li>
-<li>
-     Aun así, el comportamiento es correcto: ~29 s de interacción media, superior a Paid Social de semanas anteriores.
-    </li>
-  </ul>
+            <!-- GOOGLE ADS -->
+            <div class="card" style="box-shadow:none;border-radius:20px;padding:16px;background:#f4f5fb;">
+              <div class="card-header" style="margin-bottom:8px;">
+                <div>
+                  <div class="card-title" style="font-size:0.95rem;">Google Ads</div>
+                  <div class="card-subtitle">2 campañas: Performance Max (Academy) + Display (Eskola Athletic)</div>
+                </div>
+                <span class="pill-tag"><span></span> Búsqueda/Display de pago</span>
+              </div>
 
-  
-</div>
+              <div class="grid grid-2">
+                <div class="kpi">
+                  <div class="kpi-label">Totales (cuenta)</div>
+                  <div class="kpi-value">988 clics</div>
+                  <div class="kpi-sub">Impresiones: 62,3k · CPC medio: 0,12 €</div>
+                  <div class="kpi-delta neutral">
+                    Mucho volumen, CPC contenido
+                  </div>
+                </div>
+                <div class="kpi">
+                  <div class="kpi-label">Coste</div>
+                  <div class="kpi-value">120 €</div>
+                  <div class="kpi-sub">Comparativa: +59,01 € vs 8–14 dic (según captura)</div>
+                  <div class="kpi-delta neutral">
+                    Inversión moderada y controlada
+                  </div>
+                </div>
+              </div>
 
+              <div class="section-label">Detalle por campaña</div>
+              <ul class="list-tight">
+                <li>
+                  <strong>Performance Max · “Campaña F&F Academy”</strong>:
+                  54.464 impresiones · 13.299 interacciones · <strong>coste 89,01 €</strong> · <strong>coste medio 0,01 €</strong>.
+                  Esto indica entrega masiva y muy barata).
+                </li>
+                <li>
+                  <strong>Display · “Display-Eskola Athletic”</strong>:
+                  7.869 impresiones · 374 interacciones · <strong>coste 31,34 €</strong> · coste medio 0,08 €.
+                  Buen canal para descubrimiento/robo de audiencia, pero la conversión dependerá del reimpacto posterior.
+                </li>
+                <li>
+                  En GA4, Paid Search (google / cpc) aporta <strong>508 usuarios</strong>, con <strong>26,3s</strong> de interacción media: correcto para tráfico frío.
+                </li>
+              </ul>
 
-           <!-- GOOGLE ADS -->
-<div class="card" style="box-shadow:none;border-radius:20px;padding:16px;background:#f4f5fb;">
-  <div class="card-header" style="margin-bottom:8px;">
-    <div>
-      <div class="card-title" style="font-size:0.95rem;">Google Ads</div>
-      <div class="card-subtitle">Campaña Performance Max</div>
-    </div>
-    <span class="pill-tag"><span></span> Búsqueda de pago</span>
-  </div>
-
-  <div class="grid grid-2">
-    <div class="kpi">
-      <div class="kpi-label">Clics (plataforma)</div>
-      <div class="kpi-value">≈ 2.600 </div>
-      <div class="kpi-sub">Impresiones: ~102.000</div>
-      <div class="kpi-delta positive">
-        ▼ 9,3% menos clics y 31,2% menos impresiones </div>
-    </div>
-    <div class="kpi">
-      <div class="kpi-label">Coste &amp; CPC medio</div>
-      <div class="kpi-value">184 €</div>
-      <div class="kpi-sub">CPC plataforma: ~0,07 €/clic</div>
-      <div class="kpi-delta positive">
-       ▲ Tráfico muy barato y sostenido (0,04€)
-      </div>
-    </div>
-  </div>
-
-  <!-- Nota de discrepancia con GA4 -->
-  
-
-  <p class="small">
-    <br><br>Google Ads es el principal generador de tráfico de la semana.
-	  <br><br>
-	 En GA4, Paid Search aporta 1.136 usuarios, más del doble que la semana anterior (539), confirmando un salto fuerte en volumen real de usuarios.El tiempo medio de interacción (~33 s) es correcto para tráfico frío y mejor que Paid Social, señal de intención media/alta. <br><br>La campaña Display amplía cobertura en audiencias afines (búsquedas tipo “Eskola”), funcionando como canal de descubrimiento, mientras que Performance Max sostiene el grueso del volumen.
-  </p>
-	
-</div>
-
+              <p class="small">
+                Lectura: Google Ads está sosteniendo volumen y discovery (sobre todo PMax). Si queremos más altas de Academy,
+                el cuello está menos en “llegar” y más en “convertir”: mensajes/beneficios + CTA + formulario.
+              </p>
+            </div>
           </div>
         </div>
-
 
         <!-- ORGÁNICO -->
         <div class="card">
@@ -736,7 +546,7 @@ A nivel de adquisición, el crecimiento de usuarios viene sobre todo de Paid Sea
             <div>
               <h2 class="card-title">Tráfico orgánico y marca</h2>
               <div class="card-subtitle">
-                Search Console y el tráfico directo sobre la marca Football&Fun.
+                Search Console y el rol del orgánico en captación de intención.
               </div>
             </div>
             <span class="chip">SEO · Search Console</span>
@@ -744,27 +554,27 @@ A nivel de adquisición, el crecimiento de usuarios viene sobre todo de Paid Sea
 
           <div class="grid grid-3">
             <div class="kpi">
-              <div class="kpi-label">Clics orgánicos (SEO)</div>
-              <div class="kpi-value">133</div>
-              <div class="kpi-sub">Semana anterior: 86</div>
-              <div class="kpi-delta negative">
-               ▲ +54,7 % de clics orgánicos (+177 %)
-              </div>
-            </div>
-            <div class="kpi">
-              <div class="kpi-label">Impresiones orgánicas</div>
-              <div class="kpi-value">1.230 </div>
-              <div class="kpi-sub">CTR medio: 10,8 %</div>
-              <div class="kpi-delta negative">
-               ▲ Visibilidad al alza y CTR muy sólido  
-              </div>
-            </div>
-            <div class="kpi">
-              <div class="kpi-label">Peso por canal (GA4)</div>
-              <div class="kpi-value">≈ 6–7 %</div>
-              <div class="kpi-sub">Del tráfico total de la semana (según GA4)</div>
+              <div class="kpi-label">Clicks totales (vista Search Console)</div>
+              <div class="kpi-value">432</div>
+              <div class="kpi-sub">Impresiones: 4,17 mil</div>
               <div class="kpi-delta neutral">
-                Canal minoritario en volumen, pero uno de los más cualificados en intención y tiempo de interacción.
+                CTR alto (10,3%) y posición media 11,3
+              </div>
+            </div>
+            <div class="kpi">
+              <div class="kpi-label">CTR medio</div>
+              <div class="kpi-value">10,3 %</div>
+              <div class="kpi-sub">Señal de buena alineación query–snippet</div>
+              <div class="kpi-delta neutral">
+                Cuando aparecemos, interesamos
+              </div>
+            </div>
+            <div class="kpi">
+              <div class="kpi-label">Orgánico en GA4 (15–21 dic)</div>
+              <div class="kpi-value">71 usuarios</div>
+              <div class="kpi-sub">Interacción media: 118,6 s</div>
+              <div class="kpi-delta negative">
+                ▲ Canal de máxima calidad (aunque bajo volumen)
               </div>
             </div>
           </div>
@@ -772,15 +582,28 @@ A nivel de adquisición, el crecimiento de usuarios viene sobre todo de Paid Sea
           <div class="section-label">Cómo interpretar estos datos</div>
           <ul class="list-tight">
             <li>
-              La mayoría de las consultas orgánicas combinan marca (“football fun”, “footballfun”, “football and fun”) con intención clara de producto/servicio (“campus fútbol”, “tecnificación fútbol Bizkaia”, “campus navidad fútbol”).
+              En Search Console, predominan búsquedas de marca (footballfun / football and fun / football fun) y consultas de intención (“tecnificación”, “campus fútbol”, etc.).
+            </li>
+			<li>
+              En Search Console, predominan búsquedas de marca (footballfun / football and fun / football fun) y consultas de intención (“tecnificación”, “campus fútbol”, etc.).
+            </li>
+			<li>
+			"Buena alineación query–snippet": ¿Qué quiere decir esto? Que lo que la gente busca encaja con: el título (title), la descripción, el contenido percibido.<bR>
+
+Ejemplo mental: Buscan: “campus fútbol navidad bizkaia” --> Ven: “Campus de Navidad Football & Fun · Tecnificación en Bizkaia”
+<br>Piensan: 👉 “es justo lo que busco” → clic. Eso es alineación.
+</li>
+            <li>
+              El CTR del 10% es una muy buena señal: el snippet (el "anuncio" orgánico que se muestra) está respondiendo a lo que la gente busca.
             </li>
             <li>
-           El CTR alto (≈10–11 %) confirma que los resultados orgánicos están bien trabajados: títulos claros, mensajes alineados con lo que el usuario busca y buena relación búsqueda–landing.
-            </li>
-            <li>
-              En GA4, el tráfico orgánico presenta tiempos de interacción altos (~98 s) y más sesiones con interacción que Paid Social y Paid Search, lo que lo convierte en un canal de alta calidad, aunque todavía de bajo volumen.
+              En GA4, orgánico es el canal con mejor calidad de navegación (118,6 s de interacción media), ideal para sostener ventas sin depender de inversión.
             </li>
           </ul>
+
+          <p class="small note-warning">
+            Nota: la captura de Search Console que nos has pasado muestra un rango más amplio (no estrictamente 15–21 dic). Aun así, la lectura de CTR/posición es válida como “salud SEO”.
+          </p>
         </div>
       </section>
 
@@ -799,55 +622,50 @@ A nivel de adquisición, el crecimiento de usuarios viene sobre todo de Paid Sea
 
           <div class="grid grid-3">
             <div class="kpi">
-              <div class="kpi-label">Sesiones totales</div>
-              <div class="kpi-value">≈ 2.300–2.400 </div>
-              <div class="kpi-sub">Datos del 8–14 de diciembre</div>
-              <div class="kpi-delta positive">
-                ≈ ▲ +69 % de sesiones vs semana anterior
-              </div>
-            </div>
-            <div class="kpi">
-              <div class="kpi-label">Tasa de conversión global</div>
-              <div class="kpi-value">≈ 0,5%–0,6%</div>
-              <div class="kpi-sub">11 inscripciones / 2.300–2.400 sesiones</div>
-              <div class="kpi-delta negative">
-                El foco ha sido captación y visibilidad, no cierre
-              </div>
-            </div>
-            <div class="kpi">
-              <div class="kpi-label">Páginas clave</div>
-              <div class="kpi-value">Academy 60%</div>
-              <div class="kpi-sub">Del tráfico total</div>
+              <div class="kpi-label">Usuarios (estimación por canales principales)</div>
+              <div class="kpi-value">≈ 775</div>
+              <div class="kpi-sub">Paid Search 508 · Paid Social 124 · Orgánico 71 · Direct 50 · Email 22</div>
               <div class="kpi-delta neutral">
-               Sigue siendo el corazón absoluto de la web y el principal punto de entrada desde pago, orgánico y directo.
+                Foto realista del mix (no suma perfecta por atribución)
+              </div>
+            </div>
+            <div class="kpi">
+              <div class="kpi-label">Tasa de conversión (aproximada)</div>
+              <div class="kpi-value">≈ 2,8 %</div>
+              <div class="kpi-sub">22 inscripciones / 775 usuarios</div>
+              <div class="kpi-delta negative">
+                ▲ Semana muy buena de cierre
+              </div>
+            </div>
+            <div class="kpi">
+              <div class="kpi-label">Páginas clave (sesiones)</div>
+              <div class="kpi-value">Academy 2.142</div>
+              <div class="kpi-sub">Campus 241 · Campus+Escuela 655</div>
+              <div class="kpi-delta neutral">
+                Academy = hub de adquisición · Campus = hub de conversión
               </div>
             </div>
           </div>
 
           <div class="section-label">Cómo navegan los usuarios</div>
-         <ul class="list-tight">
-  <li>
-   Academy concentra la mayoría del tráfico y actúa como “hub” desde el que se explora Campus, PRO y Mini.
-  </li>
-
-  <li>
-   Campus Navidad mantiene: Rebote bajo (~24 %) y buen tiempo medio. Señal clara de intención fuerte, aunque con menos empuje comercial esta semana.
-  </li>
-
-  <li>
-   Las páginas de producto avanzado (/footballfun-pro/, /footballfun-porteros/) muestran mucho tiempo de interacción (más de 3 minutos de media en algunos casos), señal de interés fuerte por parte de públicos más especializados.
-  </li>
-<li>
-   
-Tráfico de Email (Mailchimp): 27 usuarios --> 16 nuevos. Es el canal más cualificado de todos, aunque con poco volumen.
-
-
-  </li>
- 
-
-  
-</ul>
-
+          <ul class="list-tight">
+            <li>
+              <strong>/academy/</strong> concentra el volumen: <strong>2.142 sesiones</strong>, rebote ~<strong>65%</strong>, interacción ~<strong>33 s</strong> (ponderada).
+              Es el principal punto de entrada desde campañas.
+            </li>
+            <li>
+              <strong>/campus/</strong> (y páginas de modalidad) es donde se decide:
+              <strong>rebote ~8%</strong> e interacción ~<strong>57 s</strong> en Campus; en <strong>PRO</strong> la interacción sube a ~<strong>103 s</strong>.
+            </li>
+            <li>
+              <strong>Email</strong> (Dimension Football / email) es el canal más cualificado:
+              <strong>120,9 s</strong> de interacción media y 0,91 sesiones con interacción por usuario activo (poco volumen, máxima calidad).
+            </li>
+            <li>
+              La existencia de tráfico a “Página no encontrada” sugiere pequeños puntos a arreglar para no perder intención en usuarios calientes.
+	12 sesiones / usuarios (según GA4) que llegaron a una página 404.
+            </li>
+          </ul>
         </div>
 
         <div class="card">
@@ -863,28 +681,40 @@ Tráfico de Email (Mailchimp): 27 usuarios --> 16 nuevos. Es el canal más cuali
 
           <ul class="list-tight">
             <li>
-              <strong>Meta · Navidad:</strong> Mantener inversión estable mientras dure el empuje de Performance Max. Meta esta semana ha funcionado mejor como asistente de marca que como canal de cierre directo.
-            </li>
-           
-            <li>
-              <strong>Google Ads:</strong> Tráfico frío pero útil para reconocimiento. Performance Max sigue funcionando como fuente eficiente de usuarios nuevos a bajo coste. Reimpacto posterior con Meta / Email.
+              <strong>Academy · Conversión:</strong>  objetivo: bajar rebote y subir leads/inscripciones sin subir inversión.
             </li>
             <li>
-              Con el aumento de sesiones y usuarios nuevos, el foco debe pasar de atraer a ayudar a decidir. Reforzar mensajes de plazas limitadas en Campus Navidad. Simplificar el camino desde páginas informativas hacia inscripción          </li>
-                        
+              <strong>Campus · Empuje final:</strong> seguir llevando tráfico a páginas de modalidad (PRO/MINI/PORTEROS) y reforzar urgencia real (plazas/fechas/lanzadera).
+              Son páginas “de decisión”.
+            </li>
+             <li>
+              <strong>Página 404:</strong> revisar todos los enlaces de la web y redireccionar <strong>(puedo encargarme yo si quieres).</strong>
+            </li>
+            <li>
+              <strong>Carrito abandonado:</strong> ¿Contemplamos el incorporar el carrito abandonado para academy? Por ver si podemos empujar algo desde ahí.
+			 
+            </li>
+			<li>
+              <strong>Trabajo de SEO:</strong> CTR alto VS. impresiones que pueden crecer. No se trata de inventar copy nuevo sino de reforzar términos que ya convierten: "campus fútbol navidad", 
+			  "tecnificación fútbol bizkaia", "academy fútbol entrenamientos". Podríamos cambiar los titles y descripciones de: /campus/ y /academy/
+			 para incluir estas palabras clave. Esto subiría las impresiones y clics sin pagar por ellos (esto lo incluyo en el <strong>presu de rediseño de la web</strong> que ya te mandé)
+			 
+            </li>
+            
+            
           </ul>
+
+          
         </div>
       </section>
     </main>
 
     <footer class="small" style="margin-top:24px;text-align:center;color:#a6a1a0;">
-      Football&Fun · Weekly Performance · Datos rellenados manualmente por semana (Meta Ads, Google Ads,
-      Search Console, GA4).
+      Football&Fun · Weekly Performance · Datos: Meta Ads, Google Ads, Search Console, GA4 + inscripciones (WPForms).
     </footer>
   </div>
 
   <script>
-    // Tabs behaviour
     const tabButtons = document.querySelectorAll(".tab-btn");
     const tabPanels  = document.querySelectorAll(".tab-panel");
 
@@ -901,14 +731,3 @@ Tráfico de Email (Mailchimp): 27 usuarios --> 16 nuevos. Es el canal más cuali
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
