@@ -180,12 +180,13 @@
     .kpi-label { font-size: 0.8rem; color: var(--text-muted); }
 
     .kpi-value {
-      font-size: 1.4rem;
-      font-weight: 600;
-      color: var(--accent-blue);
-      white-space: nowrap;
-    }
-
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--accent-blue);
+  white-space: normal;   /* 👈 permite salto de línea */
+  line-height: 1.2;
+  word-break: break-word;
+}
     .kpi-sub { font-size: 0.75rem; color: var(--text-muted); }
 
     .kpi-delta {
@@ -731,3 +732,4 @@ Ejemplo mental: Buscan: “campus fútbol navidad bizkaia” --> Ven: “Campus 
   </script>
 </body>
 </html>
+
